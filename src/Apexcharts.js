@@ -10,7 +10,7 @@ export function _createChart(selector) {
 };
 
 
-export function _render(chartDef) {
+export function render(chartDef) {
     return function() {
         var chart = new ApexCharts(document.querySelector(chartDef.selector), chartDef.apexoptions);
         chart.render();
