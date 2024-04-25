@@ -3,21 +3,21 @@
 // module Apexcharts
 
 
-exports._createChart = function(selector){
+export function createChart(selector) {
     return function(apexoptions){
         return {selector, apexoptions};
     }
 };
 
 
-exports.render = function(chartDef){
+export function render(chartDef) {
     return function() {
         var chart = new ApexCharts(document.querySelector(chartDef.selector), chartDef.apexoptions);
         chart.render();
     };
 };
 
-exports._updateOptions = function(chart) {
+export function _updateOptions(chart) {
     return function(newOptions) {
         return function() {chart.updateOptions(newOptions);};
     };
