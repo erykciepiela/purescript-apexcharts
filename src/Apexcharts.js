@@ -1,5 +1,7 @@
 "use strict";
 
+import ApexCharts from 'apexcharts'
+
 // module Apexcharts
 
 
