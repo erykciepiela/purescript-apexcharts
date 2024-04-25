@@ -3,14 +3,14 @@
 // module Apexcharts
 
 
-export function createChart(selector) {
+export function _createChart(selector) {
     return function(apexoptions){
         return {selector, apexoptions};
     }
 };
 
 
-export function render(chartDef) {
+export function _render(chartDef) {
     return function() {
         var chart = new ApexCharts(document.querySelector(chartDef.selector), chartDef.apexoptions);
         chart.render();
